@@ -7,4 +7,8 @@ function GCD(a,b){
     console.log(a)
 }
 
-GCD(12,18)
+// GCD(12,18)
+
+function LCM(a,b){
+    
+}
