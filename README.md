@@ -349,3 +349,47 @@ Target = 22
 Output:
 15 + 7 = 22
 
+
+
+# 1. What is the Sliding Window Technique?
+The Sliding Window Technique is an approach where we maintain a portion of an array or string and move that portion step by step to solve a problem efficiently.
+
+# Problems
+
+1. Find the sum of every consecutive window of size K
+let arr = [2, 4, 6, 8, 10];
+let k = 3;
+out: 12, 18, 24
+
+2. Find the maximum sum of K consecutive elements
+let arr = [2, 1, 5, 1, 3, 2];
+let k = 3;
+out: 9
+The maximum sum comes from [5, 1, 3].
+
+3. Find the minimum sum of K consecutive elements
+let arr = [4, 2, 1, 7, 3, 2];
+let k = 3;
+out: 7
+The minimum sum comes from [4, 2, 1].
+
+4. Find the average of every K consecutive elements
+let arr = [2, 4, 6, 8, 10];
+let k = 3;
+out:4, 6, 8
+Explanation: The window sums are 12, 18 and 24; divide each by 3.
+
+5. Find the maximum average of a window of size K
+
+let arr = [1, 12, -5, -6, 50, 3];
+let k = 4;
+out: 12.75
+The window [12, -5, -6, 50] has sum 51, and its average is 12.75.
+
+6. Find the first window whose sum is greater than a target
+let arr = [1, 2, 3, 4, 5];
+let k = 2;
+let target = 6;
+
+out: [3, 4]
+
