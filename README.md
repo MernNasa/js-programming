@@ -393,3 +393,65 @@ let target = 6;
 
 out: [3, 4]
 
+
+# Dynamic window problems
+1. Find the length of the longest contiguous subarray whose sum is less than or equal to 7.
+Input:[2, 1, 5, 1, 3, 2]
+Output: 3
+
+2. Find the minimum length of a contiguous subarray whose sum is at least 7.
+Input: arr = [2, 3, 1, 2, 4, 3], k = 7
+Output: 2
+Explanation: [4, 3] has sum 7 and length 2.
+
+3. Find the length of the longest substring that contains no repeated characters.
+Input: "abcabcbb"
+Output: 3
+Explanation: "abc" is a longest valid substring.
+
+# What is a Set in JavaScript?
+A Set is a built-in JavaScript object that stores unique values. It does not store duplicate values.
+
+Remember: An array can contain duplicate values, but a Set keeps only unique values. A Set also preserves the insertion order of its unique values.
+
+
+# How do we create a Set?
+There are three common ways to start working with a Set.
+1. Create an empty Set 
+      let set = new Set();
+2. Create a Set from an array
+      let set = new Set([1, 2, 3, 2, 1]);
+
+3. Create a Set from a string
+      let set = new Set("banana");
+
+# Important Set methods
+1. add()
+Adds a value to the Set. If that value already exists, nothing is duplicated.
+2. has()
+Checks whether a value exists. It returns true or false.
+3. delete()
+Removes a specific value from the Set.
+4. clear()
+Removes every value from the Set.
+5. size
+Returns the number of unique values. Note that size is a property, not a method.
+
+# Other useful ways to work with a Set
+let set = new Set([10, 20, 30]);
+
+for (let value of set) {
+    console.log(value);
+}
+
+forEach() — execute a callback for each value
+let set = new Set(["A", "B", "C"]);
+
+set.forEach(function(value) {
+    console.log(value);
+});
+
+
+
+
+
