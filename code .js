@@ -159,30 +159,30 @@
 
 
 //! to get the value
-// function minSubarrayLength(arr, k) {
-//     let left = 0;
-//     let sum = 0;
-//     let minLength = Infinity;
+function minSubarrayLength(arr, k) {
+    let left = 0;
+    let sum = 0;
+    let minLength = Infinity;
 
-//     for (let right = 0; right < arr.length; right++) {
-//         sum += arr[right];
+    for (let right = 0; right < arr.length; right++) {
+        sum += arr[right];
 
-//         while (sum >= k) {
-//             let length = right - left + 1;
+        while (sum >= k) {
+            let length = right - left + 1;
 
-//             minLength = Math.min(minLength, length);
+            minLength = Math.min(minLength, length);
 
-//             sum -= arr[left];
-//             left++;
-//         }
-//     }
+            sum -= arr[left];
+            left++;
+        }
+    }
 
-//     return minLength === Infinity ? 0 : minLength;
-// }
+    return minLength === Infinity ? 0 : minLength;
+}
 
-// let arr = [2, 3, 1, 2, 4, 3];
+let arr = [2, 3, 1, 2, 4, 3 ];
 
-// console.log(minSubarrayLength(arr, 7)); // Output: 2
+console.log(minSubarrayLength(arr, 10)); // Output: 2
 
 //! to get the subarray
 
