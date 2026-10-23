@@ -1619,3 +1619,100 @@ For beginners, learn sorting algorithms in the following order:
 7. ****Built-in `sort()`**** — Learn comparison functions and practical JavaScript sorting.
 
 ****Final Tip:**** Before memorizing the code, understand how the array changes after every pass or recursive call. Being able to explain the logic and complexity is especially important in coding interviews.
+
+
+
+
+
+# What is a searching algorithm?
+Definition: A searching algorithm is a step-by-step procedure used to find a particular element (called the target or key) in a collection of data, such as an array.
+
+# Types of searching algorithms
+1. Linear Search
+Checks elements one by one until the target is found or the collection ends.
+2. Binary Search
+Repeatedly divides a sorted search range into two halves.
+
+# Linear Search
+Definition
+Linear Search is a searching algorithm that checks each element in a collection sequentially, starting from the first element, until the target is found or all elements have been checked.
+It is also called Sequential Search.
+
+# Algorithm steps
+1. Start from index 0.
+2. Compare the current element with the target.
+3. If they are equal, return the current index.
+4. Otherwise, move to the next element.
+5. If the loop finishes without finding the target, return -1.
+
+# code 
+
+
+```javascript
+
+
+function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+let arr = [10, 25, 30, 45, 50];
+
+console.log(linearSearch(arr, 30)); // 2
+console.log(linearSearch(arr, 45)); // 3
+console.log(linearSearch(arr, 99)); // -1
+
+
+```
+
+# Binary Search
+Definition
+Binary Search is a searching algorithm that finds a target element in a sorted array by repeatedly dividing the current search range into two halves.
+
+Instead of checking every element, it eliminates half of the remaining search space after each comparison.
+
+Important rule: Binary Search requires the array to be sorted in ascending or descending order. The code below assumes ascending order.
+
+# Algorithm steps
+1. Initialize left = 0 and right = arr.length - 1.
+2. While left <= right, calculate the middle index.
+3. If the middle element equals the target, return mid.
+4. If the target is greater than the middle element, set left = mid + 1.
+5. If the target is smaller than the middle element, set right = mid - 1.
+6. If the search range becomes empty, return -1.
+
+``` javascript
+     
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+
+        if (arr[mid] === target) {
+            return mid;
+        }
+
+        if (target > arr[mid]) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+let arr = [10, 20, 30, 40, 50, 60, 70];
+
+console.log(binarySearch(arr, 60)); // 5
+console.log(binarySearch(arr, 20)); // 1
+console.log(binarySearch(arr, 99)); // -1
+
+```
